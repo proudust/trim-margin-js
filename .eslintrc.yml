@@ -1,0 +1,39 @@
+root: true
+
+env:
+  jest/globals: true
+
+extends:
+  - eslint:recommended
+  - plugin:jest/recommended
+  - plugin:prettier/recommended
+
+plugins:
+  - "@typescript-eslint"
+  - jest
+
+rules:
+  prettier/prettier:
+    - error
+    - arrowParens: avoid
+      printWidth: 100
+      singleQuote: true
+      trailingComma: all
+
+overrides:
+  - files: ["**/*.ts"]
+
+    extends:
+      - plugin:@typescript-eslint/eslint-recommended
+      - plugin:@typescript-eslint/recommended
+      - prettier/@typescript-eslint
+
+    parser: "@typescript-eslint/parser"
+
+    plugins:
+      - "@typescript-eslint"
+
+    rules:
+      "@typescript-eslint/explicit-function-return-type":
+        - warn
+        - allowExpressions: true

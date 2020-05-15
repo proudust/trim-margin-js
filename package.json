@@ -1,0 +1,34 @@
+{
+  "name": "trim-margin-js",
+  "version": "1.0.0",
+  "description": "Typescript implementation for trimMargin and trimIndent",
+  "main": "index.ts",
+  "repository": "https://github.com/proudust/trim-margin-js.git",
+  "author": "Proudust <proudust@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "scripts": {
+    "build": "tsc index.ts",
+    "lint": "eslint --fix --ignore-path .gitignore .",
+    "lint:ci": "eslint --ignore-path .gitignore .",
+    "test": "jest",
+    "test:ci": "jest --ci"
+  },
+  "dependencies": {
+    "typescript": "^3.9.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.5.1"
+  }
+}
